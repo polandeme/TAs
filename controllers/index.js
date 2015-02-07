@@ -1,9 +1,5 @@
-var user = require('./user');
-exports.index = function(req, res) {
-    res.render('index', {title: 'Elll'});
-}
+var user = require('./user'),
+    home = require('./home');
 
-exports.register = function(req, res) {
-    res.render('index', {title: 'index register'});
-}
 exports.user = user;
+exports.home = home;

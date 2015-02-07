@@ -1,16 +1,11 @@
-//var db      = require('../models/db'),
-  //  User    = {}; 
+var db      = require('../models/db'),
+    uuid    = require('./common/uuid.js');
 
 exports.register = function(req, res) {
-    res.send('index Elll');
+    console.log(req);
+    res.send(uuid.uuid());
 }
 
-exports.index = function(req, res) {
-    res.render('index', {title: 'user index'});
-}
-/*module.exports = {
-    register: User.register
-}*/
 exports.test = function(req, res) {
     console.log('test test in user.js');
 }

@@ -8,6 +8,6 @@ var controllers = require('../controllers');
  */
 
 module.exports = function(app) {
-    app.get('/test',controllers.index);
+    app.get('/', controllers.home.index);
     app.post('/api/user/register', controllers.user.register);
 }
