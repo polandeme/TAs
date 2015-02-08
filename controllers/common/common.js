@@ -1,3 +1,8 @@
+var crypto  = require('crypto');
+
+/*******************************************
+ *          生成uuid                      *
+ ******************************************/
 
 /**
  *  生成n + m 位的随机16进制字符串
@@ -30,3 +35,14 @@ function createBaseStr(n) {
     return baseStr;
 }
 
+// 加密算法 采用AES加密
+
+exports.aes = function(s) {
+    var key = 'tAs.JIa+Mi-KeY@Polande',
+        cipher = crypto.createCipher('aes-256-cbc', key),
+        crypted = cipher.update(s, 'utf-8', 'hex');
+
+    crypted += cipher.final('hex');
+
+    return crypted;
+}
